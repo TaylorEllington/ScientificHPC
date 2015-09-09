@@ -26,4 +26,9 @@ nest.o : nest.cpp nest.hpp matrix.o
 
 clean :
 	 rm *.o
+	 rm p*.txt
+	 rm f.txt
+	 rm z.txt
+	 rm err*.txt
+	 rm Project1.exe
 
