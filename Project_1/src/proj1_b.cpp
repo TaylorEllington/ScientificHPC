@@ -15,7 +15,7 @@ int main(int argc, char* argv[] ) {
 	for(int i = 0; i < n.Size(); i++){
 		h(i) = pow(2, (-1*n(i) ) );
 	}
-	n.Write();
-	h.Write();
-
+	double u_1, u_2;
+	u_1 = pow(2, -52) / 2 ;	
+	cout << u_1 << endl;
 }
