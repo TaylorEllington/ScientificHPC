@@ -29,6 +29,7 @@ int main(int argc, char* argv[] ) {
 	for(int i = 0; i < n.Size(); i++){
 		h(i) = pow(2, (-1*n(i) ) );
 	}
+
 	double forwardFiniteDifference;
 	double c1 = abs((fDoublePrime(3))/( 2* fPrime(3)));
 	double c2 = abs(  (f(3) * pow(2, -52) ) / (fPrime(3) )   );
@@ -46,6 +47,5 @@ int main(int argc, char* argv[] ) {
 	h.Write("h.txt");
 	r.Write("r.txt");
 	R.Write("R.txt");
-
 
 }
