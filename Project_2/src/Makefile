@@ -19,7 +19,7 @@ test_newton.exe :test_newton.cpp Fcn.o
 test_fd_newton.exe : test_fd_newton.cpp Fcn.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-kepler.exe : kepler.cpp
+kepler.exe : kepler.cpp matrix.o 
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 newton.o : newton.cpp
@@ -31,6 +31,8 @@ fd_newton.o : fd_newton.cpp
 Fcn.o : Fcn.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+matrix.o : matrix.cpp matrix.hpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
 
