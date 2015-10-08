@@ -22,7 +22,7 @@ double  fd_newton(Fcn& f, double x, int maxit, double tol, double alpha,  bool s
 
 		if(show_iterates)
 		cout << "\t" << i << " - Current Guess: " << X_K <<
-			" Solution update msagniutde: " << fabs(H) << " Residual: " << f(X_K) << endl;
+			" Solution update magniutde: " << fabs(H) << " Residual: " << f(X_K) << endl;
 
 		if( fabs( X_K_1  - X_K ) < tol){
 			if(show_iterates)

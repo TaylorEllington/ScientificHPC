@@ -13,24 +13,12 @@ class F : public Fcn
 
 };
 
-class FD : public Fcn
-{ 
-
-	double operator() (double x){
-	   return  3*x*x - 4 * x - 3; 
-	}
-
-};
-
-
-
 
 int main(int argc, char * argv[]){
 
 
 
 	F f;
-	FD fd;
 	double x[] = {-2.0, 1.0, 2.0};
 	double tol[] = {1e-1, 1e-5, 1e-9};
 	double alpha[] = {pow(2, -4), pow(2, -26), pow(2, -50)};
@@ -43,7 +31,7 @@ int main(int argc, char * argv[]){
 	for(int i = 0; i < 3; i++){
 		for( int j = 0; j < 3; j++){
 			for(int k = 0; k < 3; k++){
-				cout << "Experement with X: " << x[i] << ",  and tolerance: "<< tol[j] << endl;
+				cout << "Experement with X: " << x[i] <<" Alpha: "<< alpha[k] << ",  and tolerance: "<< tol[j] << endl;
 				cout << "\t==result:" <<  fd_newton(f, x[i], maxit, tol[j], alpha[k], show_iterates) << endl;
 			}
 		}
