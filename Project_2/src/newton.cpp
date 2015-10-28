@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Fcn.cpp"
 #include <iostream>
 #include <cmath>
