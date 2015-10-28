@@ -35,13 +35,14 @@ int main(int argc, char * argv[]){
 	int maxit =  15;
 	bool show_iterates =  true;
 
-	cout << "test" << endl;
+	int trialID= 0 ;
 
 	//run every permutation
 	for(int i = 0; i < 3; i++){
 		for( int j = 0; j < 3; j++){
-			cout << "Experement with X: " << x[i] << ",  and tolerance: "<< tol[j] << endl;
+			cout << trialID << " - Experement with X: " << x[i] << ",  and tolerance: "<< tol[j] << endl;
 			cout << "\tresult:" <<  newton(f, fd, x[i], maxit, tol[j], show_iterates) << endl;
+			trialID++;
 		}
  	}
 

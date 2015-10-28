@@ -37,14 +37,17 @@ int main(int argc, char * argv[]){
 	int maxit =  20;
 	bool show_iterates =  true;
 
+	int trialId = 0; 
+
 	cout << "test" << endl;
 
 	//run every permutation
 	for(int i = 0; i < 3; i++){
 		for( int j = 0; j < 3; j++){
 			for(int k = 0; k < 3; k++){
-				cout << "Experement with X: " << x[i] << ",  and tolerance: "<< tol[j] << endl;
+				cout <<  trialId <<" - Experement with X: " << x[i] << ",  and tolerance: "<< tol[j] << endl;
 				cout << "\t==result:" <<  fd_newton(f, x[i], maxit, tol[j], alpha[k], show_iterates) << endl;
+				trialId++;
 			}
 		}
  	}

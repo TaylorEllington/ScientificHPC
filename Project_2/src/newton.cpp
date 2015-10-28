@@ -16,7 +16,7 @@ double  newton(Fcn& f, Fcn& df, double x, int maxit, double tol, bool show_itera
 
 		if(show_iterates)
 		cout << "\t" << i << " - Current Guess: " << X_K <<
-			" Solution update msagniutde: " << fabs(H) << " Residual: " << f(X_K) << endl;
+			" Solution update magniutde: " << fabs(H) << " Residual: " << f(X_K) << endl;
 
 		if( fabs( X_K_1  - X_K ) < tol){
 			if(show_iterates)
