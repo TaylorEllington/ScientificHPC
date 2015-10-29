@@ -8,8 +8,11 @@ CXXFLAGS = -O -std=c++11
 #CXXFLAGS = -O0 -g -std=c++11
 
 # makefile targets
-all : test_Newton.exe  
-	
+all : test_Newton.exe  compare.exe
+
+compare.exe : compare.cpp matrix.o
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
 
 test_Newton.exe : test_Newton.cpp  matrix.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
