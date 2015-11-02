@@ -1,3 +1,9 @@
+/*
+	Taylor Ellington       
+ 	compare.cpp      
+ 	10/27/2015              
+*/
+
 #include "Newton_interpolant.cpp"
 
 #include <stdlib.h>
