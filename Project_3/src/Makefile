@@ -13,6 +13,12 @@ all : test_Newton.exe  compare.exe
 compare.exe : compare.cpp matrix.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
+test_Lagrange2D.exe : test_Lagrange2D.cpp Lagrange2D.cpp Lagrange.cpp matrix.cpp
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
+Runge_uniform.exe : Runge_uniform.cpp Lagrange2D.cpp Lagrange.cpp matrix.cpp
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
 
 test_Newton.exe : test_Newton.cpp  matrix.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
