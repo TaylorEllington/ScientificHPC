@@ -5,6 +5,7 @@
 */
 
 #include "matrix.hpp"
+#include <math.h>
 
 #include <string>
 
@@ -17,20 +18,28 @@ int main(int argc, char ** argv){
 
 	//n= m = 6 , 24
 	int set[] = {6,24};
-	string setName[] = {"p6_uni.txt", "p24_uni.txt"};
+	string setName[] = {"p6_Cheb.txt", "p24_Cheb.txt"};
 
 	for( int s = 0; s < 2 ; s++){
 		
-		//Create a set of (m + 1) evenly spaced nodes, x, over the interval [-4, 4]
-		Matrix x = Linspace(-4, 4, set[s]+1, 1);
+		//Create a set of (m + 1) Chebyshev nodes, x, over the interval [-4, 4]
+		Matrix x(set[s]+1);
+		for(int i = 0; i < set[s]+1; i++){
+			x(i) = 4*cos(  (((2*i) + 1)*M_PI) / ((2*set[s]) + 2)  ); 
+		}
 
-		//Create a set of (n+ 1) evenly spaced nodes, y, over the interval [-4, 4]
-		Matrix y = Linspace(-4, 4, set[s]+1, 1);
+
+		//Create a set of (n+ 1) Chebyshev spaced nodes, y, over the interval [-4, 4]
+		Matrix y(set[s]+1);
+		for(int i = 0; i < set[s]+1; i++){
+			x(i) = 4*cos(  (((2*i) + 1)*M_PI) / ((2*set[s]) + 2)  ); 
+		}
 
 		Matrix f(set[s]+1, set[s]+1 );
   		for (int j=0; j<set[s]; j++) 
     		for (int i=0; i<set[s]; i++) 
     			f(i,j) = (1) / ( (1) + ( x(i)*x(i) ) +  (y(i)*y(i)) ) ;
+
 
 		//Create an array of 201 evenly spaced evaluation points, a, over the interval [-4, 4]
 		Matrix a = Linspace(-4, 4, 201, 1);
