@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
 
 	//define test sets
 	int n[] = {10, 20, 40, 80};
-	int m[] = {100, 1000, 10000, 10000};
+	int m[] = {100, 1000, 10000, 100000};
 
 	//test all permutations of sets
 	for(int n_it = 0; n_it < 4; n_it++){

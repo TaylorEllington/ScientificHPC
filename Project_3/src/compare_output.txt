@@ -1,32 +1,32 @@
 Experiment with n = 10, m = 100
-	Lagrange: 195, Newton: 12
+	Lagrange: 197, Newton: 11
 Experiment with n = 10, m = 1000
-	Lagrange: 1874, Newton: 99
+	Lagrange: 2151, Newton: 99
 Experiment with n = 10, m = 10000
-	Lagrange: 27100, Newton: 5483
-Experiment with n = 10, m = 10000
-	Lagrange: 19414, Newton: 1019
+	Lagrange: 22373, Newton: 983
+Experiment with n = 10, m = 100000
+	Lagrange: 201830, Newton: 9860
 Experiment with n = 20, m = 100
-	Lagrange: 710, Newton: 23
+	Lagrange: 709, Newton: 23
 Experiment with n = 20, m = 1000
-	Lagrange: 7469, Newton: 222
+	Lagrange: 7124, Newton: 190
 Experiment with n = 20, m = 10000
-	Lagrange: 74100, Newton: 1858
-Experiment with n = 20, m = 10000
-	Lagrange: 73211, Newton: 1925
+	Lagrange: 71508, Newton: 1833
+Experiment with n = 20, m = 100000
+	Lagrange: 720082, Newton: 18341
 Experiment with n = 40, m = 100
-	Lagrange: 2696, Newton: 51
+	Lagrange: 2725, Newton: 55
 Experiment with n = 40, m = 1000
-	Lagrange: 28863, Newton: 364
+	Lagrange: 26583, Newton: 374
 Experiment with n = 40, m = 10000
-	Lagrange: 269048, Newton: 3470
-Experiment with n = 40, m = 10000
-	Lagrange: 272221, Newton: 3502
+	Lagrange: 268447, Newton: 3566
+Experiment with n = 40, m = 100000
+	Lagrange: 2714003, Newton: 35687
 Experiment with n = 80, m = 100
-	Lagrange: 10374, Newton: 146
+	Lagrange: 10471, Newton: 142
 Experiment with n = 80, m = 1000
-	Lagrange: 104132, Newton: 735
+	Lagrange: 105789, Newton: 743
 Experiment with n = 80, m = 10000
-	Lagrange: 1034580, Newton: 6974
-Experiment with n = 80, m = 10000
-	Lagrange: 1060487, Newton: 6869
+	Lagrange: 1034836, Newton: 6997
+Experiment with n = 80, m = 100000
+	Lagrange: 10421232, Newton: 69500
