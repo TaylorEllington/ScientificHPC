@@ -9,7 +9,7 @@
 
 
 Matrix Newton_coefficients(Matrix& x, Matrix& y){
-	int n = x.Size();
+	int n = x.Size()  ;
 
 	Matrix a( n );
     //calculates newton coefficents based on method in the book
@@ -17,9 +17,9 @@ Matrix Newton_coefficients(Matrix& x, Matrix& y){
 		a(i) = y(i);
 	}
 
-	for(int j = 0; j < n; j++){
-		for( int i = n-1 ; i > j; i--){
-			a(i) = ( a(i) - a(i-1) )/( x(i) - x(i-1) );
+	for(int j = 1; j < n; j++){
+		for(int i = n-1; i >=j; i--){
+			a(i) = ( a(i) - a(i-1) )/( x(i) - x(i-j) );
 		}
 	}
 
@@ -32,10 +32,10 @@ double Newton_evaluate(Matrix& x, Matrix& c, double z){
 	//evaluates newton interpolant
 	double temp = c(n-1);
 
-	for( int i = n - 1; i >= 0; i--){
+	for( int i = n - 2; i >= 0; i--){
 
 		temp = (temp * ( z-x(i) ) );
-		temp + c(i); 
+		temp =temp + c(i); 
  	}
 
 
