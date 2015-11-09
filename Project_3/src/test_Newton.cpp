@@ -20,7 +20,7 @@ using namespace std;
 
 
 
-// This routine tests the function lagrange.cpp
+// This routine tests the function Newton_interpolant.cpp
 int main(int argc, char* argv[]) {
 
   // simple Lambda function for f(x)
