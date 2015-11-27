@@ -4,10 +4,14 @@
 *   11/10/2015
 */
 
+#include "matrix.hpp"
+
+
 int main(int argc, char** argv){
 	// Create an array of 400 evenly-spaced T values over the
 	// interval[800,1200] K. Output this to disk as the file
 	// Temp.txt
+	Matrix T_values = Linspace(800, 1200, 400, 1);
 
 	// Create an array of 600 evenly-spaced t values over the
 	// interval[0,48] K. Output this to disk as the file
