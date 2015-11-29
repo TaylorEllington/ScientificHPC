@@ -3,6 +3,7 @@
 *   composite_int.cpp
 *   11/10/2015
 */
+
 // Inclusions
 #include <stdlib.h>
 #include <stdio.h>
@@ -12,15 +13,9 @@
 
 using namespace std;
 
-// This routine numerically approximates the integral
-//    int_a^b fun(x) dx
-// using the composite Gaussian quadrature rule with 2 points per 
-// subinterval (i.e. O(h^4) accurate), over n subintervals.  We 
-// require that fun have the calling syntax 
-//    y = fun(x)
-// where y is a double and x is a const double.
+
 //
-// Usage: F = composite_Gauss2(fun, a, b, n);
+// Usage: F = composite_int(fun, a, b, n);
 //
 // inputs:   f       integrand (Fcn object)
 //           a       lower limit of integration
@@ -76,7 +71,7 @@ double composite_int(Fcn& f, const double a, const double b, const int n){
   } // end loop
 
   // return final result
-
+  
   return (0.5*h*F);
 
 } // end of function

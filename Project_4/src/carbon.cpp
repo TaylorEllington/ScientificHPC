@@ -4,7 +4,7 @@
 *   11/10/2015
 */
 
-#include "Fcn.cpp"
+#include "fcn.hpp"
 #include <math.h>
 #include <iostream>
 
