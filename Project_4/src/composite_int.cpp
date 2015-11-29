@@ -72,10 +72,11 @@ double composite_int(Fcn& f, const double a, const double b, const int n){
 
     // add Gauss2 approximation on this subinterval to result
     F += w1*f(node1) + w2*f(node2) + w3*f(node3) + w4*f(node4);
-
+    //cout << "++++" <<F << endl;
   } // end loop
 
   // return final result
+
   return (0.5*h*F);
 
 } // end of function

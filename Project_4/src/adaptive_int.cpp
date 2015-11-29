@@ -21,18 +21,21 @@ int adaptive_int(Fcn& f, const double a, const double b, const double rtol,
 	double I_approx, R_approx, error, bound;
 	int approx_success_flag, starting_n, K;
 
+	//cout << b << " " << a << endl;
+
 	//set starting conditions
 	starting_n = n = 10;
-	K = 20;
+	K = 70;
 	
 	//perfrom initial calcuation
 	R_approx = composite_int(f,  a,  b,  starting_n);
 	Ntot = n;
-
+ 	//cout << "------------------" << endl;
 	//check error
 	I_approx = composite_int(f,  a,  b,  starting_n + K);
 	Ntot  += (starting_n+ K);
 	error = fabs(I_approx - R_approx);
+	//cout << I_approx << "   " << R_approx << endl;
 	bound = (rtol*fabs(I_approx)) + atol;
 	
 	
@@ -46,18 +49,21 @@ int adaptive_int(Fcn& f, const double a, const double b, const double rtol,
 		double h, c, h_better, n_better;
 
 		h = (b-a)/starting_n;
-
-		c = (pow(h, 8))/error;
+		//cout << b << " " << a << " " << error << endl;
+		c = (pow(h, 8.0))/error;
 
 		h_better = ( pow( (bound/c), (1.0/8.0) ) );
 
 		n_better = n + (b-a)/h_better;
 
-
+		//cout << c << endl;
 		R_approx = composite_int(f, a, b, ceil(n_better));
+
+		
 		R = R_approx;
 		n = ceil(n_better);
 		Ntot += n;
+
 
 
 	}
