@@ -8,15 +8,14 @@
 #include "carbon.cpp"
 
 
-//double carbon(const double x, const double t, const double T,
-//	          const double rtol, const double atol);
-
-
 int main(int argc, char** argv){
 
+	//Setup tolerances for experiments
 	double rtol, atol;
 	rtol = 1e-11;
 	atol = 1e-15;
+
+
 	// Create an array of 400 evenly-spaced T values over the
 	// interval[800,1200] K. Output this to disk as the file
 	// Temp.txt
@@ -107,9 +106,6 @@ int main(int argc, char** argv){
 	C4mm_1000K.Write("C4mm_1000K.txt");
 	C4mm_1100K.Write("C4mm_1100K.txt");
 	C4mm_1200K.Write("C4mm_1200K.txt");
-
-
-
 
 	return 0;
 }

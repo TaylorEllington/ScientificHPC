@@ -23,25 +23,29 @@ public:
 };
 
 double D(double T){
-
+	//temprature dependant coefficent, seperated out for readablility
 	return 6.2e-7 * (exp(  -((8e4)/(8.31*T)) ));
 }
 
 
 double erf(const double y, const double rtol, const double atol){
-	
+	//Error function, uses adaptive_int 
+
 	fcn5 f;
 	double a, b, R;
 	int n, Ntot;
 
-
+	//setup conditions
 	a = 0;
 	b = y;
-	//cout << y << endl;
+
+	//solve, catch errors in adaptive int
 	int success = adaptive_int( f, a, b, rtol, atol, R, n, Ntot);
 
-	//cout <<  (2.0/sqrt(M_PI)) << endl;
-
+	if(success == 1 ){
+		cerr << "Error: adaptive_int call in carbon.erf failed with conditions a= " 
+		<< a << " b= " << b << " rtol= " << rtol << "atol= " << atol << " n= " << n << endl;
+	}
 
 	return (2.0/sqrt(M_PI)) * R;
 }
@@ -51,11 +55,10 @@ double carbon(const double x, const double t, const double T,
 	
 
 	double d = D(T);
-	//cout << d << endl;
+	
 	double y = x/ (sqrt(4.0*t*d));
-	//cout << y << endl;
+	
 	double ERF = erf(y, rtol, atol); 
-	//cout << ERF << endl;
-
+	
 	return 0.02 -(0.02-0.001)*ERF;
 }

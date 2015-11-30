@@ -14,17 +14,6 @@
 using namespace std;
 
 
-//
-// Usage: F = composite_int(fun, a, b, n);
-//
-// inputs:   f       integrand (Fcn object)
-//           a       lower limit of integration
-//           b       upper limit of integration
-//           n       number of subintervals
-//
-// outputs:  F       value of numerical integral
-// 
-
 
 double composite_int(Fcn& f, const double a, const double b, const int n){
 	
@@ -51,6 +40,7 @@ double composite_int(Fcn& f, const double a, const double b, const int n){
   double w2 =  0.5 - (1.0/12.0)*sqrt(10.0/3.0);
   double w3 =  0.5 + (1.0/12.0)*sqrt(10.0/3.0);
   double w4 =  0.5 - (1.0/12.0)*sqrt(10.0/3.0);
+  
   // initialize result
   double F = 0.0;
 
@@ -67,7 +57,7 @@ double composite_int(Fcn& f, const double a, const double b, const int n){
 
     // add Gauss2 approximation on this subinterval to result
     F += w1*f(node1) + w2*f(node2) + w3*f(node3) + w4*f(node4);
-    //cout << "++++" <<F << endl;
+    
   } // end loop
 
   // return final result

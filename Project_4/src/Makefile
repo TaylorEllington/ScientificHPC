@@ -1,10 +1,8 @@
 ###################################################################
 #  Makefile for project 4
 #
-#  Daniel R. Reynolds
-#  SMU Mathematics
-#  Math 3316
-#  31 October 2015
+#  Taylor Ellington
+#  22 November 2015
 ###################################################################
 
 # compiler & flags
