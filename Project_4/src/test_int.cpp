@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
   cout << "\n Gauss-2 approximation:\n";
   cout << "     n             R(f)            relerr    conv rate\n";
   cout << "  ---------------------------------------------------\n";
-  vector<int> n = {20, 80, 140, 200, 260, 320};
+  vector<int> n = {20, 80, 140, 200, 260, 500};
   vector<double> errors(n.size());
   vector<double> hvals(n.size());
 
